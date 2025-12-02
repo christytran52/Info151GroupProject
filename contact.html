@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phanatic Stats | Contact Us</title>
     <link rel="stylesheet" href="style.css">
+    <script src="dialog_Box.js"></script>
 </head>
 <body>
 
-   <header>
+<header>
     <h1 class="site-title">Phanatic Stats</h1>
     <p class="site-tagline">INFO151 Group Project Assignment.</p>
 
@@ -17,136 +18,123 @@
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="roster.html" class="nav-link">Roster</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link active">Contact Us</a></li>
         </ul>
     </nav>
 </header>
 
-    <main>
-        <!-- PAGE INTRO -->
-        <section class="contact-intro">
-            <h2>Contact & Stay Connected</h2>
-            <p>
-                Use this page to subscribe for Phillies updates from Phanatic Stats
-                and to share any thoughts, ideas, or feedback about the project.
-            </p>
-        </section>
+<main>
+    <!-- PAGE INTRO -->
+    <section class="contact-intro">
+        <h2>Contact & Stay Connected</h2>
+        <p>
+            Use this page to subscribe for Phillies updates from Phanatic Stats
+            and to share any thoughts, ideas, or feedback about the project.
+        </p>
+    </section>
 
-        <!-- CONTACT GRID: SUBSCRIBE + COMMENTS -->
-        <section class="contact-grid">
+    <!-- CONTACT GRID: SUBSCRIBE + COMMENTS -->
+    <section class="contact-grid">
 
-            <!-- SUBSCRIBE FORM -->
-            <article class="contact-box">
-                <h3>Subscribe for Phillies Email Updates</h3>
-                <p>
-                    Sign up to receive updates when new Phillies breakdowns, roster
-                    notes, or stat experiments are added to the project.
-                </p>
+        <!-- SUBSCRIBE FORM -->
+        <article class="contact-box">
+            <h3>Subscribe for Phillies Email Updates</h3>
+            <p>Sign up to receive updates when new Phillies breakdowns, roster notes, or stat experiments are added.</p>
 
-                <form id="subscribe-form">
-                    <div class="form-row">
-                        <label for="subscribe-name">Name (optional):</label>
-                        <input type="text" id="subscribe-name" name="subscribe-name">
-                    </div>
+            <form id="subscribe-form">
+                <div class="form-row">
+                    <label for="subscribe-name">Name (optional):</label>
+                    <input type="text" id="subscribe-name" name="subscribe-name">
+                </div>
 
-                    <div class="form-row">
-                        <label for="subscribe-email">Email:</label>
-                        <input type="email" id="subscribe-email" name="subscribe-email" required>
-                    </div>
+                <div class="form-row">
+                    <label for="subscribe-email">Email:</label>
+                    <input type="email" id="subscribe-email" name="subscribe-email" required>
+                </div>
 
-                    <div class="form-row">
-                        <label for="subscribe-frequency">Update Preference:</label>
-                        <select id="subscribe-frequency" name="subscribe-frequency">
-                            <option value="weekly">Weekly summary</option>
-                            <option value="monthly">Monthly summary</option>
-                            <option value="major-updates">Only major updates</option>
-                        </select>
-                    </div>
+                <div class="form-row">
+                    <label for="subscribe-frequency">Update Preference:</label>
+                    <select id="subscribe-frequency" name="subscribe-frequency">
+                        <option value="weekly">Weekly summary</option>
+                        <option value="monthly">Monthly summary</option>
+                        <option value="major-updates">Only major updates</option>
+                    </select>
+                </div>
 
-                    <button type="submit">Sign Up</button>
-                    <p id="subscribe-message" class="form-message"></p>
-                </form>
-            </article>
+                <button type="submit">Sign Up</button>
+                <p id="subscribe-message" class="form-message"></p>
+            </form>
+        </article>
 
-            <!-- COMMENT / THOUGHTS FORM -->
-            <article class="contact-box">
-                <h3>Share Your Thoughts</h3>
-                <p>
-                    Drop a quick comment about the Phillies, this project, or any
-                    ideas you think should be added. This demo stores comments only
-                    on this page (no database).
-                </p>
+        <!-- COMMENT FORM -->
+        <article class="contact-box">
+            <h3>Share Your Thoughts</h3>
+            <p>Drop a quick comment about the Phillies or this project.</p>
 
-                <form id="comment-form">
-                    <div class="form-row">
-                        <label for="comment-name">Name:</label>
-                        <input type="text" id="comment-name" name="comment-name" required>
-                    </div>
+            <form id="comment-form">
+                <div class="form-row">
+                    <label for="comment-name">Name:</label>
+                    <input type="text" id="comment-name" name="comment-name" required>
+                </div>
 
-                    <div class="form-row">
-                        <label for="comment-text">Comment:</label>
-                        <textarea id="comment-text" name="comment-text" rows="4" required></textarea>
-                    </div>
+                <div class="form-row">
+                    <label for="comment-text">Comment:</label>
+                    <textarea id="comment-text" name="comment-text" rows="4" required></textarea>
+                </div>
 
-                    <button type="submit">Submit Comment</button>
-                    <p id="comment-message" class="form-message"></p>
-                </form>
+                <button type="submit">Submit Comment</button>
+                <p id="comment-message" class="form-message"></p>
+            </form>
 
-                <ul id="comment-list" class="comment-list">
-                    <!-- JavaScript can append comments here -->
-                </ul>
-            </article>
+            <ul id="comment-list" class="comment-list"></ul>
+        </article>
 
-        </section>
-    </main>
-  
-    <!-- FOOTER (same pattern across all pages) -->
-    <footer class="site-footer">
-        <div class="footer-grid">
+    </section>
+</main>
 
-            <!-- COURSE + ASSIGNMENT -->
-            <div class="footer-box">
-                <h4>Course & Assignment Information</h4>
-                <p>INFO 151 – Web Development and Design</p>
-                <p>Group Project Submission</p>
-                <p>Instructor: Bo Song</p>
-                <p>Section: 001</p>
-            </div>
+<footer class="site-footer">
+    <div class="footer-grid">
 
-            <!-- GROUP MEMBERS -->
-            <div class="footer-box">
-                <h4>Authors of Group 5</h4>
-                <p>Sarah Bunting</p>
-                <p>Alyssa Diallo</p>
-                <p>Iyana Miller</p>
-                <p>Christy Tran</p>
-            </div>
-
-            <!-- DREXEL INFO -->
-            <div class="footer-box">
-                <h4>Drexel University</h4>
-                <p>College of Computing & Informatics</p>
-                <p>3141 Chestnut Street</p>
-                <p>Philadelphia, PA 19104</p>
-                <p><a href="https://drexel.edu/cci/" target="_blank">drexel.edu/cci</a></p>
-            </div>
-
-            <!-- NAV LINKS -->
-            <div class="footer-box">
-                <h4>Navigation</h4>
-                <ul class="footer-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="roster.html">Roster</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
+        <div class="footer-box">
+            <h4>Course & Assignment Information</h4>
+            <p>INFO 151 – Web Development and Design</p>
+            <p>Group Project Submission</p>
+            <p>Instructor: Bo Song</p>
+            <p>Section: 001</p>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Phanatic Stats | Group Project for INFO151</p>
+        <div class="footer-box">
+            <h4>Authors of Group 5</h4>
+            <p>Sarah Bunting</p>
+            <p>Alyssa Diallo</p>
+            <p>Iyana Miller</p>
+            <p>Christy Tran</p>
         </div>
-    </footer>
 
+        <div class="footer-box">
+            <h4>Drexel University</h4>
+            <p>College of Computing & Informatics</p>
+            <p>3141 Chestnut Street</p>
+            <p>Philadelphia, PA 19104</p>
+            <p><a href="https://drexel.edu/cci/" target="_blank">drexel.edu/cci</a></p>
+        </div>
+
+        <div class="footer-box">
+            <h4>Navigation</h4>
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="roster.html">Roster</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Phanatic Stats | Group Project for INFO151</p>
+    </div>
+</footer>
+
+</body>
 </html>
