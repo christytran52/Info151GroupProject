@@ -1,17 +1,18 @@
 <!--
     INFO151 Group Project - Phanatic Stat 
-    File: about.html
+    File: contact.html
     Sarah Bunting, Alyssa Diallo, Iyana Miller, Christy Tran
-    This for the Phanatic Stat website
+    Contact and subscription page for the Phanatic Stats website
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title shown on browser tab -->
     <title>Phanatic Stats | Contact Us</title>
+    <!-- Link to external csss stylesheet -->
     <link rel="stylesheet" href="..\css\style.css">
+    <!-- js file for dialog popup boxes -->
     <script src="..\js\dialog_Box.js"></script>
 </head>
 <body>
@@ -33,6 +34,7 @@
 <main>
     <!-- PAGE INTRO -->
     <section class="contact-intro">
+        <!-- heading 2 for contact page -->
         <h2>Contact & Stay Connected</h2>
         <p>
             Use this page to subscribe for Phillies updates from Phanatic Stats
@@ -47,18 +49,19 @@
         <article class="contact-box">
             <h3>Subscribe for Phillies Email Updates</h3>
             <p>Sign up to receive updates when new Phillies breakdowns, roster notes, or stat experiments are added.</p>
-
+            <!-- Subscription form -->
             <form id="subscribe-form">
+                <!-- Name input row (optional) -->
                 <div class="form-row">
                     <label for="subscribe-name">Name (optional):</label>
                     <input type="text" id="subscribe-name" name="subscribe-name">
                 </div>
-
+                <!-- Email input row (required) --> 
                 <div class="form-row">
                     <label for="subscribe-email">Email:</label>
                     <input type="email" id="subscribe-email" name="subscribe-email" required>
                 </div>
-
+                <!-- Dropdown input for update frequency -->
                 <div class="form-row">
                     <label for="subscribe-frequency">Update Preference:</label>
                     <select id="subscribe-frequency" name="subscribe-frequency">
@@ -67,35 +70,38 @@
                         <option value="major-updates">Only major updates</option>
                     </select>
                 </div>
-
+                <!-- Submission button for subscribe form -->
                 <button type="submit">Sign Up</button>
+                <!-- js confirmation or error message -->
                 <p id="subscribe-message" class="form-message"></p>
             </form>
         </article>
 
         <!-- COMMENT FORM -->
         <article class="contact-box">
+            <!-- Heading for comment box -->
             <h3>Share Your Thoughts</h3>
             <p>Drop a quick comment about the Phillies or this project, or any ideas you think should be added</p>
-
+            <!-- Comment form for leaving feedback -->
             <form id="comment-form">
                 <div class="form-row">
+                    <!-- Name input (required) -->
                     <label for="comment-name">Name:</label>
                     <input type="text" id="comment-name" name="comment-name" required>
                 </div>
-
+                <!-- Comment text area (required, multiple lines) -->
                 <div class="form-row">
                     <label for="comment-text">Comment:</label>
                     <textarea id="comment-text" name="comment-text" rows="4" required></textarea>
                 </div>
-
+                <!-- Submit button for comment form -->
                 <button type="submit">Submit Comment</button>
+                <!-- js confirmation or error message -->
                 <p id="comment-message" class="form-message"></p>
             </form>
-
+            <!-- unordered list where submitted comments appear -->
             <ul id="comment-list" class="comment-list"></ul>
         </article>
-
     </section>
 </main>
 

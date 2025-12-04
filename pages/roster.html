@@ -1,6 +1,6 @@
 <!--
     INFO151 Group Project - Phanatic Stat 
-    File: about.html
+    File: roster.html
     Sarah Bunting, Alyssa Diallo, Iyana Miller, Christy Tran
     This for the Phanatic Stat website
 -->
@@ -9,9 +9,9 @@
 <html lang="en">
   
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phanatic Stats | Roster </title>
+    <!-- css and roster animation script -->
+    <!-- Runs scroll animations for player cards and styling-->
     <link rel="stylesheet" href="..\css\style.css">
     <script src="..\js\rosterAnimation.js"></script>
 </head>
@@ -37,19 +37,25 @@
     </section>
 
     <!-- ================= PLAYER 1 ================= -->
+    <!-- Player Card Container -->
+    <!-- Holds the player image, bio, and stats table -->
     <section class="player-card">
+        <!-- Left Side: Image + Bio -->
+        <!-- Displays player photo and name -->
         <div class="player-left">
             <img src="../rosterImages/bader-roster-image.jpeg" alt="Player 1" class="player-photo">
-
             <div class="player-bio">
                 <h3>Alec Bohm</h3>
                 
             </div>
         </div>
-
+        <!-- Right Side: Stats Table -->
+        <!-- Shows batting statistics for the player -->
         <div class="player-right">
             <table class="player-stats-container">
                 <thead>
+                    <!-- Stats Header Row -->
+                    <!-- Defines stat categories -->
                     <tr>
                         <th>AVG</th><th>SLG</th><th>OBP</th><th>OPS</th>
                         <th>PA</th><th>AB</th><th>H</th><th>SO</th>
