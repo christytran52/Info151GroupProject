@@ -1,165 +1,237 @@
 /* 
     INFO151 Group Project - Phanatic Stat 
     File: style.css
+    Sarah Bunting, Alyssa Diallo, Iyana Miller, Christy Tran
+    This CSS file contains styles for the Phanatic Stat website
 */
 
+/* Global Page Settings */
+/* Controls default font, spacing, and background for the entire site */
 body {
+    /* Font family */
+    /* sets default font for entire site */
     font-family: Arial, Helvetica, sans-serif;
+    /* Line Height */
+    /* improves readability by spacing out lines */
     line-height: 1.5;
-    background-color: #f3f4f6; /* light gray instead of white */
+    /* Background and Text Colors */
+    /* Light gray background for softer contrast */
+    background-color: #f3f4f6;
     color: #222;
 }
-
-/* ===== HEADER & TITLE ===== */
+/* Header Container */
+/* Styles the main top header including title and nav */
 header {
+    /* Centers title + nav */
     text-align: center;
+    /* Spacing inside header */
     padding: 1.5rem 1rem 1rem 1rem;
-    background-color: #b22222; /* Phillies red-ish */
+    /* Phillies red background */
+    background-color: #b22222;
+    /* White text */
     color: #ffffff;
 }
-
+/* Main Site Title Text */
+/* Controls size and spacing of the site’s title */
 .site-title {
+    /* Large title text */
     font-size: 2rem;
+    /* Small spacing below title */
     margin-bottom: 0.25rem;
 }
-
+/* Subtitle Tagline */
+/* Styles the small tagline under the main title */
 .site-tagline {
+    /* Slightly smaller tagline */
     font-size: 0.95rem;
+    /* Slight see-through effect */
     opacity: 0.9;
+    /* Spacing below tagline */
     margin-bottom: 0.75rem;
 }
-
-/* ===== NAVIGATION BAR ===== */
+/* Nav Bar Container */
+/* Adds spacing above the nav menu */
 nav {
+    /* Small spacing above nav */
     margin-top: 0.25rem;
 }
-
 /* horizontal nav list centered */
+/* Controls layout of the nav list items */
 .nav-list {
+    /* Removes default bullets */
     list-style: none;
+    /* Places items horizontally */
     display: inline-flex;
+    /* Space between items */
     gap: 1rem;
+    /* Adds vertical padding */
     padding: 0.5rem 0;
 }
-
 /* each item acts like a container */
 .nav-item {}
-
 /* link as interactive pill */
 .nav-link {
+    /* Allows padding + transforms */
     display: inline-block;
+    /* Space inside buttons */
     padding: 0.45rem 1.2rem;
+    /* Perfect rounded pill shape */
     border-radius: 999px;
+    /* Transparent white background */
     background-color: rgba(255, 255, 255, 0.15);
+    /* White text */
     color: #ffffff;
+    /* Removes underline */
     text-decoration: none;
+    /* Bold text */
     font-weight: 600;
+    /* Slight spacing between letters */
     letter-spacing: 0.03em;
-
+    /* Smooth hover animations */
     transition:
         background-color 0.25s ease,
         transform 0.25s ease,
         box-shadow 0.25s ease;
 }
-
 /* hover / focus "float" effect */
 .nav-link:hover,
 .nav-link:focus-visible {
+    /* Turns white on hover */
     background-color: #ffffff;
+    /* Text becomes red */
     color: #b22222;
+    /* Slight lift upward */
     transform: translateY(-3px);
+    /* Adds depth */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
-
 /* active page state */
+/* Highlights the link for the current page */
 .nav-link.active {
+    /* White background */
     background-color: #ffffff;
+    /* Red text */
     color: #b22222;
 }
-
-/* ===== WELCOME SECTION ===== */
+/*  WELCOME SECTION  */
+/*  Styles the intro section including heading and paragraph */
 .welcome-section {
+    /* spacing above and below section */
     margin: 2rem auto;
+    /* Limits max width of content */
     max-width: 1000px;
+    /* Inner left/right padding */
     padding: 0 1rem;
 }
-
+/* Welcome Grid Layout */
+/* Creates a responsive grid for welcome boxes */
 .welcome-grid {
+    /* makes grid layout */
     display: grid;
+    /* Auto fits boxes while maintaining minimum width */
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Space between grid items */
     gap: 1rem;
 }
-
 /* Interactive welcome boxes */
+/* Styles the welcome information boxes with gradient */
 .welcome-box {
+    /* Blue to red gradient background */
     background: linear-gradient(135deg, #003da5, #b22222);
+    /* White text for contrast */
     color: #ffffff;
+    /* Inner padding */
     padding: 1.5rem;
+    /* Rounded corners */
     border-radius: 12px;
+    /* Soft shadow for depth */
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    /* Smooth animation for hover effects */
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
         filter 0.2s ease;
 }
-
 /* Slight color variation for second box */
+/* Applies different gradient color styling */
 .welcome-box.secondary {
+    /* Red to soft pink gradient */
     background: linear-gradient(135deg, #b22222, #ffb6c1);
 }
-
+/* Controls spacing below section titles for both welcome boxes */
 .welcome-box h2,
 .welcome-box h3 {
+    /* Space under heading text */
     margin-bottom: 0.5rem;
 }
-
+/* Welcome Box Paragraph Text */
+/* Adjusts text font inside box */
 .welcome-box p {
+    /* Space under heading text */
     font-size: 0.95rem;
 }
-
 /* Hover interaction similar to nav */
+/* Creates lift and brightness effect on hover */
 .welcome-box:hover {
+    /* Moves box up slightly */
     transform: translateY(-3px);
+    /* box shadow on hover */
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    /* brightness increase */
     filter: brightness(1.05);
 }
-
-/* ===== PAGE OVERVIEW CARDS ===== */
+/* Page Overview Cards Section */
+/* Controls spacing, layout, and alignment of the overview cards area */
 .page-overview {
+    /* Outer spacing */
     margin: 2rem auto 3rem auto;
+    /* Width limit for readable layout */
     max-width: 1000px;
+    /* Inner left/right padding */
     padding: 0 1rem;
+    /* Centers section heading */
     text-align: center;
 }
-
+/* Page Overview Heading */
+/* Adjusts spacing below the section title */
 .page-overview h2 {
+    /* Gap under heading */
     margin-bottom: 1rem;
 }
-
+/* Overview Cards Grid */
+/* Creates a responsive grid for page description cards */
 .page-cards-grid {
+    /* grid layout */
     display: grid;
+    /* Auto fits cards*/
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* Space between grid items */
     gap: 1rem;
+    /* Space above the grid */
     margin-top: 1rem;
 }
-
 /* Individual page cards */
+/* Styles each card */
+
+/* Individual Page Card */
+/* Styles each card that describes a different page */
 .page-card {
     background-color: #ffffff;
+    /* Rounded corners */
     border-radius: 12px;
     padding: 1.25rem 1rem;
     border: 1px solid #ddd;
     text-align: left;
+    /* animation for hover effects */
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
         border-color 0.2s ease;
 }
-
+/* Adds spacing and text size for header and paragraph */
 .page-card h3 {
     margin-bottom: 0.5rem;
 }
-
 .page-card p {
     font-size: 0.95rem;
     margin-bottom: 0.75rem;
@@ -172,9 +244,11 @@ nav {
     border-radius: 999px;
     background-color: #003da5;
     color: #ffffff;
+    /* Removes underline */
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
+    /*hover animation */
     transition:
         background-color 0.2s ease,
         color 0.2s ease;
@@ -195,67 +269,62 @@ nav {
 
 
 
-/* =========== ROSTER PAGE: Player Stats Tables  =========== */
+/* ROSTER PAGE: Player Stats Tables */
 /* Stats container box */
 .player-stats-container {
     width: 100%;
     background-color: #ffffff;
     color: #111;
     border-radius: 10px;
-    border: 2px solid #003da5; /* strong blue outline */
+    /* strong blue outline */
+    border: 2px solid #003da5;
     padding: 1rem;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
+/* box animation hover*/
 .player-stats-container:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
-
 /* The table itself */
 .player-stats {
     width: 100%;
     font-size: 0.9rem;
     margin-top: 0.5rem;
-    border: 2px solid #003da5; /* outer border */
+    /* outer border */
+    border: 2px solid #003da5; 
 }
-
 /* Table header */
 .player-stats thead {
     background-color: #003da5;
     color: #ffffff;
 }
-
 /* Table cells */
 .player-stats th,
 .player-stats td {
-    border: 1px solid #003da5; /* inner cell borders */
+    /* inner cell borders */
+    border: 1px solid #003da5;
     padding: 0.5rem;
     text-align: center;
 }
 
-
-/* ===== ROSTER PAGE: Player Section ===== */
+/* ROSTER PAGE: Player Section  */
 .player-section {
     max-width: 1000px;
     margin: 2rem auto 3rem auto;
     padding: 0 1rem;
 }
-
 .player-section h2 {
     margin-bottom: 0.5rem;
 }
-
 .player-intro {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
 }
 
-/* =========== ROSTER PAGE: Player Card Layout =========== */
-/* =============================
-   ROSTER PLAYER CARD (MATCH AUTHOR CARD)
-   ============================= */
+/*  ROSTER PAGE: Player Card Layout  */
+/* ROSTER PLAYER CARD (MATCH AUTHOR CARD) */
 .player-card {
     display: flex;
     gap: 1.75rem;
@@ -269,20 +338,17 @@ nav {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
-
 .player-card:hover {
     transform: translateY(-3px);
     filter: brightness(1.05);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
 }
-
 /* LEFT SIDE LAYOUT – same as author-left */
 .player-left {
     width: 220px;
     flex-shrink: 0;
     text-align: center;
 }
-
 /* PLAYER PHOTO – match author-photo */
 .player-photo {
     width: 100%;
@@ -293,7 +359,6 @@ nav {
     margin-bottom: 0.75rem;
     border: 1px solid #ccc;
 }
-
 /* PLAYER BIO BOX – same vibe as author-bio */
 .player-bio {
     background-color: #f9fafb;
@@ -306,14 +371,12 @@ nav {
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
-
 /* RIGHT SIDE – same alignment structure */
 .player-right {
     flex: 1;
     display: flex;
     align-items: center;
 }
-
 /* STATS TABLE GOES HERE */
 /* Stats container box */
 .player-stats-container {
@@ -326,12 +389,10 @@ nav {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .player-stats-container:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
-
 /* The table itself */
 .player-stats {
     width: 100%;
@@ -339,13 +400,11 @@ nav {
     margin-top: 0.5rem;
     border: 2px solid #003da5; /* outer border */
 }
-
 /* Table header */
 .player-stats thead {
     background-color: #003da5;
     color: #ffffff;
 }
-
 /* Table cells */
 .player-stats th,
 .player-stats td {
@@ -353,20 +412,16 @@ nav {
     padding: 0.5rem;
     text-align: center;
 }
-
-
-/* ===== ABOUT PAGE – Project Box ===== */
+/* ABOUT PAGE – Project Box */
 .about-project {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
-
 .about-grid {
     display: grid;
     grid-template-columns: 1fr;
 }
-
 .about-box {
     background: linear-gradient(135deg, #003da5, #b22222);
     color: #ffffff;
@@ -378,38 +433,31 @@ nav {
         box-shadow 0.2s ease,
         filter 0.2s ease;
 }
-
 .about-box h2 {
     margin-bottom: 0.75rem;
 }
-
 .about-box p {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
-
 .about-box:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
     filter: brightness(1.05);
 }
-
-/* ===== AUTHORS SECTION ===== */
+/* AUTHORS SECTION */
 .authors-section {
     max-width: 1000px;
     margin: 2rem auto 3rem auto;
     padding: 0 1rem;
 }
-
 .authors-section h2 {
     margin-bottom: 0.5rem;
 }
-
 .authors-intro {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
 }
-
 /* Author cards similar to roster, but for people */
 /* Author cards now use the same gradient background as the about project box */
 .author-card {
@@ -424,14 +472,11 @@ nav {
     align-items: flex-start;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
-
-
 .author-left {
     width: 220px;
     flex-shrink: 0;
     text-align: center;
 }
-
 /* Bio box: light background on top of gradient */
 .author-photo {
     width: 100%;
@@ -440,9 +485,9 @@ nav {
     margin-bottom: 0.75rem;
     border: 1px solid #ccc;
 }
-
 .author-bio {
-    background-color: #f9fafb; /* very light gray */
+    /* very light gray */
+    background-color: #f9fafb; 
     color: #111;
     padding: 0.75rem;
     border-radius: 8px;
@@ -450,17 +495,16 @@ nav {
     font-size: 0.9rem;
     text-align: left;
 }
-
 /* Right side: keeps the description box separate and lighter */
 .author-right {
     flex: 1;
     display: flex;
     align-items: center;
 }
-
 .author-responsibility {
     width: 100%;
-    background-color: #ffffff; /* white box on gradient */
+    /* white box on gradient */
+    background-color: #ffffff; 
     color: #111;
     border-radius: 10px;
     border: 2px solid #003da5;
@@ -471,40 +515,33 @@ nav {
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
-
 .author-responsibility h4 {
     margin-bottom: 0.5rem;
 }
-
 .author-responsibility:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
-
 @media (max-width: 750px) {
     .author-card {
         flex-direction: column;
     }
-
     .author-left {
         width: 100%;
         max-width: 260px;
         margin: 0 auto;
     }
-
     .author-right {
         width: 100%;
     }
 }
-
-/* ===== CONTACT PAGE LAYOUT ===== */
+/* CONTACT PAGE LAYOUT */
 .contact-intro {
     max-width: 900px;
     margin: 2rem auto 1rem auto;
     padding: 0 1rem;
     text-align: center;
 }
-
 .contact-grid {
     max-width: 1000px;
     margin: 1rem auto 3rem auto;
@@ -513,7 +550,6 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
 }
-
 .contact-box {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -521,30 +557,22 @@ nav {
     border: 1px solid #ddd;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
-
 .contact-box h3 {
     margin-bottom: 0.5rem;
 }
-
 .contact-box p {
     font-size: 0.95rem;
     margin-bottom: 0.75rem;
 }
-
-
-
-
-
-
-/* ========== SITE FOOTER ========== */
+/* SITE FOOTER */
 .site-footer {
     background-color: #1f1f1f;
     color: #e0e0e0;
     padding: 2rem 1rem 1rem 1rem;
     margin-top: 3rem;
-    border-top: 4px solid #b22222; /* Phillies red trim */
+    /* Phillies red trim */
+    border-top: 4px solid #b22222;
 }
-
 .footer-grid {
     max-width: 1200px;
     margin: 0 auto;
@@ -554,51 +582,43 @@ nav {
     border-bottom: 1px solid #555;
     padding-bottom: 1.25rem;
 }
-
 /* Each box in the grid */
 .footer-box h4 {
     margin-bottom: 0.5rem;
     font-size: 1.05rem;
     color: #ffffff;
 }
-
 .footer-box p,
 .footer-box li {
     font-size: 0.9rem;
     margin-bottom: 0.35rem;
 }
-
 /* Visible dividers between columns */
 .footer-box {
     padding-right: 1rem;
     border-right: 1px solid #555;
 }
-
 .footer-box:last-child {
-    border-right: none; /* remove divider on far right */
+    /* remove divider on far right */
+    border-right: none; 
 }
-
 /* Footer nav list */
 .footer-nav {
     list-style: none;
     padding: 0;
 }
-
 .footer-nav li {
     margin-bottom: 0.3rem;
 }
-
 .footer-nav a {
     color: #e0e0e0;
     text-decoration: none;
     transition: color 0.2s ease, padding-left 0.2s ease;
 }
-
 .footer-nav a:hover {
     color: #ffcccb; /* light red/pink hover */
     padding-left: 4px; /* subtle slide effect */
 }
-
 /* Bottom copyright bar */
 .footer-bottom {
     text-align: center;
@@ -606,38 +626,32 @@ nav {
     font-size: 0.85rem;
     color: #cccccc;
 }
-
 /* RESPONSIVE DESIGN */
 @media (max-width: 850px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
-
 @media (max-width: 550px) {
     .footer-grid {
         grid-template-columns: 1fr;
     }
-
     .footer-box {
         border-right: none;
         border-bottom: 1px solid #444;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
     }
-
     .footer-box:last-child {
         border-bottom: none;
     }
 }
-
 /* Roster Fade-In Animation */
 .roster-hidden {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
-
 .roster-show {
     opacity: 1;
     transform: translateY(0);
